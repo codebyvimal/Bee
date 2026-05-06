@@ -1,0 +1,5 @@
+/*
+  Shared design-token notes live here when the product design system expands.
+  Runtime CSS variables are defined in app/globals.css so Tailwind and shadcn/ui
+  can consume them directly.
+*/

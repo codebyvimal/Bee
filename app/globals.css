@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 58% 96%;
+    --foreground: 35 38% 10%;
+    --card: 40 60% 98%;
+    --card-foreground: 35 38% 10%;
+    --popover: 40 60% 98%;
+    --popover-foreground: 35 38% 10%;
+    --primary: 43 96% 52%;
+    --primary-foreground: 35 42% 9%;
+    --secondary: 38 31% 89%;
+    --secondary-foreground: 35 38% 14%;
+    --muted: 39 26% 90%;
+    --muted-foreground: 31 16% 39%;
+    --accent: 152 21% 34%;
+    --accent-foreground: 44 67% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 36 24% 82%;
+    --input: 36 24% 82%;
+    --ring: 43 96% 44%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 35 34% 8%;
+    --foreground: 44 67% 96%;
+    --card: 35 30% 11%;
+    --card-foreground: 44 67% 96%;
+    --popover: 35 30% 11%;
+    --popover-foreground: 44 67% 96%;
+    --primary: 43 96% 52%;
+    --primary-foreground: 35 42% 9%;
+    --secondary: 34 18% 17%;
+    --secondary-foreground: 44 67% 96%;
+    --muted: 34 18% 17%;
+    --muted-foreground: 37 13% 70%;
+    --accent: 152 21% 40%;
+    --accent-foreground: 44 67% 96%;
+    --destructive: 0 63% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 34 16% 22%;
+    --input: 34 16% 22%;
+    --ring: 43 96% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8;
+  }
+}
