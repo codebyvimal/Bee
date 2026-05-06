@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { AdminHeader } from "@/components/admin/admin-header";
 import { getCurrentAdmin } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProtectedAdminLayout({
   children
 }: Readonly<{

@@ -206,23 +206,23 @@ The MVP should prefer server actions for app-owned form submissions. API routes 
 
 ### Server Actions
 
-| Action | File | Caller | Responsibility |
-|---|---|---|---|
-| `createOrderAction` | `actions/orders.ts` | Customer order form | Validate order, enforce payment rules, calculate total, insert order |
-| `updateOrderAction` | `actions/orders.ts` | Admin order screen | Update payment status, order status, and admin notes |
-| `createWholesaleInquiryAction` | `actions/wholesale.ts` | Wholesale form | Validate and insert wholesale inquiry |
-| `updateInquiryAction` | `actions/wholesale.ts` | Admin inquiry screen | Update admin notes and lead status |
-| `signInAction` | `actions/auth.ts` | Admin login form | Sign admin in through Supabase Auth |
-| `signOutAction` | `actions/auth.ts` | Admin header | End Supabase session |
+| Action                         | File                   | Caller               | Responsibility                                                       |
+| ------------------------------ | ---------------------- | -------------------- | -------------------------------------------------------------------- |
+| `createOrderAction`            | `actions/orders.ts`    | Customer order form  | Validate order, enforce payment rules, calculate total, insert order |
+| `updateOrderAction`            | `actions/orders.ts`    | Admin order screen   | Update payment status, order status, and admin notes                 |
+| `createWholesaleInquiryAction` | `actions/wholesale.ts` | Wholesale form       | Validate and insert wholesale inquiry                                |
+| `updateInquiryAction`          | `actions/wholesale.ts` | Admin inquiry screen | Update admin notes and lead status                                   |
+| `signInAction`                 | `actions/auth.ts`      | Admin login form     | Sign admin in through Supabase Auth                                  |
+| `signOutAction`                | `actions/auth.ts`      | Admin header         | End Supabase session                                                 |
 
 ### API Routes
 
-| Route | Method | Purpose | MVP Status |
-|---|---|---|---|
-| `/api/health` | `GET` | Deployment and uptime health check | Required |
-| `/api/export-orders` | `GET` | Export admin order CSV | Required after admin list |
-| `/api/webhooks/payments` | `POST` | Razorpay/Cashfree payment webhook | Future |
-| `/api/cloudinary/signature` | `POST` | Signed upload support for payment screenshots/product assets | Future |
+| Route                       | Method | Purpose                                                      | MVP Status                |
+| --------------------------- | ------ | ------------------------------------------------------------ | ------------------------- |
+| `/api/health`               | `GET`  | Deployment and uptime health check                           | Required                  |
+| `/api/export-orders`        | `GET`  | Export admin order CSV                                       | Required after admin list |
+| `/api/webhooks/payments`    | `POST` | Razorpay/Cashfree payment webhook                            | Future                    |
+| `/api/cloudinary/signature` | `POST` | Signed upload support for payment screenshots/product assets | Future                    |
 
 ## 6. Authentication Flow
 
@@ -292,13 +292,13 @@ The app should not make order status depend completely on payment status because
 
 ### Admin Routes
 
-| Page | Purpose |
-|---|---|
-| `/admin` | Dashboard summary and quick actions |
-| `/admin/orders` | Search, filter, update orders |
-| `/admin/inquiries` | Manage wholesale leads |
+| Page               | Purpose                             |
+| ------------------ | ----------------------------------- |
+| `/admin`           | Dashboard summary and quick actions |
+| `/admin/orders`    | Search, filter, update orders       |
+| `/admin/inquiries` | Manage wholesale leads              |
 | `/admin/analytics` | Simple sales and district analytics |
-| `/admin/login` | Public admin login page |
+| `/admin/login`     | Public admin login page             |
 
 ### Dashboard Data
 
@@ -325,11 +325,11 @@ The dashboard should load aggregated data server-side:
 
 ### Environments
 
-| Environment | Purpose | Services |
-|---|---|---|
-| Local | Development | Local Next.js, remote Supabase free project, Cloudinary dev folder |
-| Preview | Pull request / branch testing | Vercel preview, same Supabase project or separate staging project |
-| Production | Public site | Vercel production, Supabase production project, Cloudinary production folder |
+| Environment | Purpose                       | Services                                                                     |
+| ----------- | ----------------------------- | ---------------------------------------------------------------------------- |
+| Local       | Development                   | Local Next.js, remote Supabase free project, Cloudinary dev folder           |
+| Preview     | Pull request / branch testing | Vercel preview, same Supabase project or separate staging project            |
+| Production  | Public site                   | Vercel production, Supabase production project, Cloudinary production folder |
 
 ### Required Environment Variables
 
@@ -376,4 +376,3 @@ NEXT_PUBLIC_UPI_ID=
 - Load images through Next.js image optimization.
 - Avoid large animation libraries.
 - Keep mobile layout first and progressively enhance for desktop.
-

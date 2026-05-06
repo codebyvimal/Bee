@@ -4,48 +4,80 @@
 
 @layer base {
   :root {
-    --background: 42 58% 96%;
-    --foreground: 35 38% 10%;
-    --card: 40 60% 98%;
-    --card-foreground: 35 38% 10%;
-    --popover: 40 60% 98%;
-    --popover-foreground: 35 38% 10%;
-    --primary: 43 96% 52%;
-    --primary-foreground: 35 42% 9%;
-    --secondary: 38 31% 89%;
-    --secondary-foreground: 35 38% 14%;
-    --muted: 39 26% 90%;
-    --muted-foreground: 31 16% 39%;
-    --accent: 152 21% 34%;
-    --accent-foreground: 44 67% 96%;
-    --destructive: 0 72% 51%;
+    /* Backgrounds: Soft, warm, minimalist off-white */
+    --background: 40 20% 97%;
+    --foreground: 20 14% 15%;
+
+    /* Cards and Popovers: Clean white for depth */
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 15%;
+
+    /* Primary: Elegant, muted gold/amber for modern wellness */
+    --primary: 38 40% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft stone/beige */
+    --secondary: 40 15% 90%;
+    --secondary-foreground: 20 14% 20%;
+
+    /* Muted: Subtle grays for borders and inactive states */
+    --muted: 40 10% 92%;
+    --muted-foreground: 20 10% 45%;
+
+    /* Accent: Perhaps a soft sage or earthy green for wellness */
+    --accent: 120 15% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive: Softened red */
+    --destructive: 0 50% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 36 24% 82%;
-    --input: 36 24% 82%;
-    --ring: 43 96% 44%;
-    --radius: 0.5rem;
+
+    /* Borders and inputs */
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 38 40% 50%;
+
+    /* Border radius: Elegant, slightly rounded but crisp */
+    --radius: 0.35rem;
   }
 
   .dark {
-    --background: 35 34% 8%;
-    --foreground: 44 67% 96%;
-    --card: 35 30% 11%;
-    --card-foreground: 44 67% 96%;
-    --popover: 35 30% 11%;
-    --popover-foreground: 44 67% 96%;
-    --primary: 43 96% 52%;
-    --primary-foreground: 35 42% 9%;
-    --secondary: 34 18% 17%;
-    --secondary-foreground: 44 67% 96%;
-    --muted: 34 18% 17%;
-    --muted-foreground: 37 13% 70%;
-    --accent: 152 21% 40%;
-    --accent-foreground: 44 67% 96%;
-    --destructive: 0 63% 44%;
+    /* Backgrounds: Deep, rich charcoal */
+    --background: 20 10% 10%;
+    --foreground: 40 20% 90%;
+
+    /* Cards and Popovers */
+    --card: 20 10% 12%;
+    --card-foreground: 40 20% 90%;
+    --popover: 20 10% 12%;
+    --popover-foreground: 40 20% 90%;
+
+    /* Primary */
+    --primary: 38 40% 55%;
+    --primary-foreground: 20 10% 10%;
+
+    /* Secondary */
+    --secondary: 20 10% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    /* Muted */
+    --muted: 20 10% 18%;
+    --muted-foreground: 40 10% 60%;
+
+    /* Accent */
+    --accent: 120 15% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 50% 45%;
     --destructive-foreground: 0 0% 100%;
-    --border: 34 16% 22%;
-    --input: 34 16% 22%;
-    --ring: 43 96% 52%;
+
+    /* Borders and inputs */
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 38 40% 55%;
   }
 
   * {
@@ -57,17 +89,46 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    @apply bg-primary text-primary-foreground;
+    @apply bg-primary/20 text-foreground;
   }
 }
 
 @layer components {
+  /* Container System */
+  .container-shell {
+    @apply mx-auto w-full max-w-[1400px] px-4 md:px-8 lg:px-12;
+  }
+
+  .container-reading {
+    @apply mx-auto w-full max-w-[768px] px-4 md:px-8;
+  }
+
+  /* Section Layouts */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+
   .section-shell {
-    @apply mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8;
+    @apply container-shell section-padding;
+  }
+
+  /* Mobile Responsive Utilities */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

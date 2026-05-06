@@ -308,4 +308,3 @@ Launch safely on free tier services.
 ### Expansion Rule
 
 Before adding each future feature, create the database table and service boundary first, then build UI on top of that boundary.
-

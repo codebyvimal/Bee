@@ -77,79 +77,79 @@ inquiry_notes
 
 Stores user profile and role information for Supabase Auth users.
 
-| Column | Type | Notes |
-|---|---|---|
-| `id` | `uuid` | Primary key, references `auth.users(id)` |
-| `name` | `text` | User display name |
-| `phone` | `text` | Optional phone number |
-| `role` | `user_role` | `admin` or `customer` |
-| `created_at` | `timestamptz` | Created timestamp |
-| `updated_at` | `timestamptz` | Updated timestamp |
+| Column       | Type          | Notes                                    |
+| ------------ | ------------- | ---------------------------------------- |
+| `id`         | `uuid`        | Primary key, references `auth.users(id)` |
+| `name`       | `text`        | User display name                        |
+| `phone`      | `text`        | Optional phone number                    |
+| `role`       | `user_role`   | `admin` or `customer`                    |
+| `created_at` | `timestamptz` | Created timestamp                        |
+| `updated_at` | `timestamptz` | Updated timestamp                        |
 
 ### `orders`
 
 Stores customer orders for the Nuts & Honey Box.
 
-| Column | Type | Notes |
-|---|---|---|
-| `id` | `uuid` | Primary key |
-| `customer_name` | `text` | Customer full name |
-| `phone` | `text` | 10-digit phone number |
-| `address` | `text` | Delivery address |
-| `district` | `text` | Delivery district |
-| `quantity` | `integer` | Number of boxes |
-| `price_per_box` | `integer` | Snapshot price at order time |
-| `total_price` | `integer` | Server-calculated total |
-| `payment_status` | `payment_status` | Manual payment tracking |
-| `order_status` | `order_status` | Fulfillment tracking |
-| `payment_method` | `payment_method` | UPI or COD in MVP |
-| `payment_reference` | `text` | Optional UPI reference or future gateway id |
-| `payment_screenshot_url` | `text` | Optional future Cloudinary URL |
-| `admin_notes` | `text` | Latest internal note summary |
-| `created_at` | `timestamptz` | Created timestamp |
-| `updated_at` | `timestamptz` | Updated timestamp |
+| Column                   | Type             | Notes                                       |
+| ------------------------ | ---------------- | ------------------------------------------- |
+| `id`                     | `uuid`           | Primary key                                 |
+| `customer_name`          | `text`           | Customer full name                          |
+| `phone`                  | `text`           | 10-digit phone number                       |
+| `address`                | `text`           | Delivery address                            |
+| `district`               | `text`           | Delivery district                           |
+| `quantity`               | `integer`        | Number of boxes                             |
+| `price_per_box`          | `integer`        | Snapshot price at order time                |
+| `total_price`            | `integer`        | Server-calculated total                     |
+| `payment_status`         | `payment_status` | Manual payment tracking                     |
+| `order_status`           | `order_status`   | Fulfillment tracking                        |
+| `payment_method`         | `payment_method` | UPI or COD in MVP                           |
+| `payment_reference`      | `text`           | Optional UPI reference or future gateway id |
+| `payment_screenshot_url` | `text`           | Optional future Cloudinary URL              |
+| `admin_notes`            | `text`           | Latest internal note summary                |
+| `created_at`             | `timestamptz`    | Created timestamp                           |
+| `updated_at`             | `timestamptz`    | Updated timestamp                           |
 
 ### `wholesale_inquiries`
 
 Stores wholesale leads from the public website.
 
-| Column | Type | Notes |
-|---|---|---|
-| `id` | `uuid` | Primary key |
-| `name` | `text` | Contact person |
-| `business_name` | `text` | Business name |
-| `phone` | `text` | 10-digit phone number |
-| `quantity_needed` | `text` | Requested quantity |
-| `monthly_volume` | `text` | Optional monthly volume |
-| `notes` | `text` | Public form notes |
-| `lead_status` | `lead_status` | Admin lead status |
-| `admin_notes` | `text` | Latest internal note summary |
-| `created_at` | `timestamptz` | Created timestamp |
-| `updated_at` | `timestamptz` | Updated timestamp |
+| Column            | Type          | Notes                        |
+| ----------------- | ------------- | ---------------------------- |
+| `id`              | `uuid`        | Primary key                  |
+| `name`            | `text`        | Contact person               |
+| `business_name`   | `text`        | Business name                |
+| `phone`           | `text`        | 10-digit phone number        |
+| `quantity_needed` | `text`        | Requested quantity           |
+| `monthly_volume`  | `text`        | Optional monthly volume      |
+| `notes`           | `text`        | Public form notes            |
+| `lead_status`     | `lead_status` | Admin lead status            |
+| `admin_notes`     | `text`        | Latest internal note summary |
+| `created_at`      | `timestamptz` | Created timestamp            |
+| `updated_at`      | `timestamptz` | Updated timestamp            |
 
 ### `order_notes`
 
 Stores a history of internal admin notes for orders.
 
-| Column | Type | Notes |
-|---|---|---|
-| `id` | `uuid` | Primary key |
-| `order_id` | `uuid` | References `orders(id)` |
-| `note` | `text` | Internal note |
-| `created_by` | `uuid` | References `auth.users(id)` |
-| `created_at` | `timestamptz` | Created timestamp |
+| Column       | Type          | Notes                       |
+| ------------ | ------------- | --------------------------- |
+| `id`         | `uuid`        | Primary key                 |
+| `order_id`   | `uuid`        | References `orders(id)`     |
+| `note`       | `text`        | Internal note               |
+| `created_by` | `uuid`        | References `auth.users(id)` |
+| `created_at` | `timestamptz` | Created timestamp           |
 
 ### `inquiry_notes`
 
 Stores a history of internal admin notes for wholesale leads.
 
-| Column | Type | Notes |
-|---|---|---|
-| `id` | `uuid` | Primary key |
-| `inquiry_id` | `uuid` | References `wholesale_inquiries(id)` |
-| `note` | `text` | Internal note |
-| `created_by` | `uuid` | References `auth.users(id)` |
-| `created_at` | `timestamptz` | Created timestamp |
+| Column       | Type          | Notes                                |
+| ------------ | ------------- | ------------------------------------ |
+| `id`         | `uuid`        | Primary key                          |
+| `inquiry_id` | `uuid`        | References `wholesale_inquiries(id)` |
+| `note`       | `text`        | Internal note                        |
+| `created_by` | `uuid`        | References `auth.users(id)`          |
+| `created_at` | `timestamptz` | Created timestamp                    |
 
 ## 5. MVP SQL Schema
 
@@ -378,17 +378,16 @@ with check (public.is_admin());
 
 Do not add these in the first MVP unless needed. The current schema leaves space for them.
 
-| Future Table | Purpose |
-|---|---|
-| `products` | Multiple products and prices |
-| `product_images` | Cloudinary image gallery |
-| `inventory_movements` | Stock changes |
-| `customers` | Customer accounts and profiles |
-| `carts` | Multi-item carts |
-| `cart_items` | Cart line items |
-| `payments` | Gateway payment attempts and webhook states |
-| `coupons` | Discounts |
-| `subscriptions` | Recurring snack plans |
-| `shipments` | Delivery tracking |
-| `invoices` | Automated invoices |
-
+| Future Table          | Purpose                                     |
+| --------------------- | ------------------------------------------- |
+| `products`            | Multiple products and prices                |
+| `product_images`      | Cloudinary image gallery                    |
+| `inventory_movements` | Stock changes                               |
+| `customers`           | Customer accounts and profiles              |
+| `carts`               | Multi-item carts                            |
+| `cart_items`          | Cart line items                             |
+| `payments`            | Gateway payment attempts and webhook states |
+| `coupons`             | Discounts                                   |
+| `subscriptions`       | Recurring snack plans                       |
+| `shipments`           | Delivery tracking                           |
+| `invoices`            | Automated invoices                          |

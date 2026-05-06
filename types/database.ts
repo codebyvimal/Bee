@@ -1,14 +1,10 @@
 export type UserRole = "admin" | "customer";
 export type PaymentStatus = "unpaid" | "paid" | "verification_pending" | "refunded";
-export type OrderStatus =
-  | "pending"
-  | "paid"
-  | "processing"
-  | "shipped"
-  | "delivered"
-  | "cancelled";
-export type PaymentMethod = "upi" | "cod";
+export type OrderStatus = "pending" | "paid" | "processing" | "shipped" | "delivered" | "cancelled";
+export type PaymentMethod = "upi" | "cod" | "razorpay" | "cashfree";
 export type LeadStatus = "new" | "contacted" | "qualified" | "converted" | "closed";
+
+type SupabaseRecord = Record<string, unknown>;
 
 export type Profile = {
   id: string;
@@ -56,18 +52,24 @@ export type Database = {
   public: {
     Tables: {
       profiles: {
-        Row: Profile;
+        Row: Profile & SupabaseRecord;
         Insert: Omit<Profile, "created_at" | "updated_at"> & {
           created_at?: string;
           updated_at?: string;
-        };
-        Update: Partial<Omit<Profile, "id" | "created_at">>;
+        } & SupabaseRecord;
+        Update: Partial<Omit<Profile, "id" | "created_at">> & SupabaseRecord;
+        Relationships: [];
       };
       orders: {
-        Row: Order;
+        Row: Order & SupabaseRecord;
         Insert: Omit<
           Order,
-          "id" | "created_at" | "updated_at" | "admin_notes" | "payment_reference" | "payment_screenshot_url"
+          | "id"
+          | "created_at"
+          | "updated_at"
+          | "admin_notes"
+          | "payment_reference"
+          | "payment_screenshot_url"
         > & {
           id?: string;
           created_at?: string;
@@ -75,20 +77,36 @@ export type Database = {
           admin_notes?: string | null;
           payment_reference?: string | null;
           payment_screenshot_url?: string | null;
-        };
-        Update: Partial<Omit<Order, "id" | "created_at" | "updated_at">>;
+        } & SupabaseRecord;
+        Update: Partial<Omit<Order, "id" | "created_at" | "updated_at">> & SupabaseRecord;
+        Relationships: [];
       };
       wholesale_inquiries: {
-        Row: WholesaleInquiry;
-        Insert: Omit<WholesaleInquiry, "id" | "created_at" | "updated_at" | "admin_notes" | "lead_status"> & {
+        Row: WholesaleInquiry & SupabaseRecord;
+        Insert: Omit<
+          WholesaleInquiry,
+          "id" | "created_at" | "updated_at" | "admin_notes" | "lead_status"
+        > & {
           id?: string;
           created_at?: string;
           updated_at?: string;
           lead_status?: LeadStatus;
           admin_notes?: string | null;
-        };
-        Update: Partial<Omit<WholesaleInquiry, "id" | "created_at" | "updated_at">>;
+        } & SupabaseRecord;
+        Update: Partial<Omit<WholesaleInquiry, "id" | "created_at" | "updated_at">> &
+          SupabaseRecord;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: {
+      user_role: UserRole;
+      payment_status: PaymentStatus;
+      order_status: OrderStatus;
+      payment_method: PaymentMethod;
+      lead_status: LeadStatus;
+    };
+    CompositeTypes: Record<string, never>;
   };
 };

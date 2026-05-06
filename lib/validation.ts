@@ -75,7 +75,9 @@ export function validateOrderAdminUpdate(formData: FormData): ValidationResult<O
   if (!["unpaid", "verification_pending", "paid"].includes(paymentStatus)) {
     fieldErrors.paymentStatus = "Invalid payment status.";
   }
-  if (!["pending", "paid", "processing", "shipped", "delivered", "cancelled"].includes(orderStatus)) {
+  if (
+    !["pending", "paid", "processing", "shipped", "delivered", "cancelled"].includes(orderStatus)
+  ) {
     fieldErrors.orderStatus = "Invalid order status.";
   }
 
