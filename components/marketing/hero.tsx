@@ -1,7 +1,7 @@
-import Image from "next/image";
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { brand } from "@/lib/constants";
+
 
 export function Hero() {
   return (

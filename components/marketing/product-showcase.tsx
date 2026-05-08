@@ -48,7 +48,7 @@ export function ProductShowcase() {
           </p>
           <h2 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl">{product.name}</h2>
           <p className="mb-8 text-lg font-medium leading-relaxed text-muted-foreground">
-            A big spoonful of happiness! We've mixed the sweetest, most delicious honey with a perfectly crunchy blend of nuts. It's the ultimate treat that makes everyone smile, morning, noon, or night!
+            A big spoonful of happiness! We&apos;ve mixed the sweetest, most delicious honey with a perfectly crunchy blend of nuts. It&apos;s the ultimate treat that makes everyone smile, morning, noon, or night!
           </p>
 
           <Card className="mb-8 border-primary/20 bg-primary/5 p-6">

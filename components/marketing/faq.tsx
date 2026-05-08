@@ -34,7 +34,7 @@ export function FAQ() {
           Got Questions?
         </p>
         <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl">
-          We've Got Answers!
+          We&apos;ve Got Answers!
         </h2>
       </div>
 

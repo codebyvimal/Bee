@@ -17,7 +17,7 @@ export function WholesaleCTA() {
               Share the Sweetness!
             </h2>
             <p className="mb-8 max-w-xl text-lg font-medium leading-relaxed text-background/80">
-              Planning a big party, corporate event, or stocking your store shelves? We've got you covered with special bulk pricing and adorable custom packaging options that everyone will love.
+              Planning a big party, corporate event, or stocking your store shelves? We&apos;ve got you covered with special bulk pricing and adorable custom packaging options that everyone will love.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
