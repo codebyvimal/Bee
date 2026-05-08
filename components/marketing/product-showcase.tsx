@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -5,11 +6,11 @@ import { product } from "@/lib/constants";
 import { formatCurrency } from "@/lib/format";
 
 const features = [
-  "100% Raw, Unfiltered Honey",
-  "Premium Roasted Nuts",
-  "No Artificial Preservatives",
-  "Ethically Sourced",
-  "Beautifully Packaged for Gifting"
+  "100% Pure, Real Honey",
+  "Super Crunchy Nuts",
+  "No Yucky Preservatives",
+  "Sourced with Love",
+  "Perfect for Gifts & Treats"
 ];
 
 export function ProductShowcase() {
@@ -21,16 +22,14 @@ export function ProductShowcase() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary/30 transition-transform duration-500 group-hover:scale-[1.02]">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50" />
 
-            {/* Placeholder for Product Image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-              <div className="mb-8 flex size-48 items-center justify-center rounded-full bg-gradient-to-tr from-primary/40 to-secondary shadow-soft">
-                <span className="font-serif text-4xl italic text-primary-foreground">HB</span>
-              </div>
-              <h3 className="mb-2 text-2xl font-medium text-foreground">The Signature Box</h3>
-              <p className="mx-auto max-w-xs text-sm text-muted-foreground">
-                A visual representation of the beautifully crafted Hunnybi package.
-              </p>
-            </div>
+            {/* Actual Product Image */}
+            <Image
+              src="/images/product.png"
+              alt="The Signature Hunnybi Box"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
           {/* Floating Badge */}
@@ -44,14 +43,12 @@ export function ProductShowcase() {
 
         {/* Product Details */}
         <div className="flex flex-col justify-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
-            Our Signature Product
+          <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+            Our Fan Favorite
           </p>
-          <h2 className="mb-6 text-4xl font-medium tracking-tight sm:text-5xl">{product.name}</h2>
-          <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-            Experience the perfect synergy of nature&apos;s finest offerings. Our signature box
-            combines the robust flavor of premium nuts with the delicate sweetness of ethically
-            sourced raw honey.
+          <h2 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl">{product.name}</h2>
+          <p className="mb-8 text-lg font-medium leading-relaxed text-muted-foreground">
+            A big spoonful of happiness! We've mixed the sweetest, most delicious honey with a perfectly crunchy blend of nuts. It's the ultimate treat that makes everyone smile, morning, noon, or night!
           </p>
 
           <Card className="mb-8 border-primary/20 bg-primary/5 p-6">

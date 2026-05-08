@@ -3,38 +3,38 @@ export function FAQ() {
     {
       question: "Is the honey completely raw and unprocessed?",
       answer:
-        "Yes, our honey is 100% raw, unfiltered, and unpasteurized. This ensures that all natural enzymes, antioxidants, and pollen remain intact for maximum health benefits."
+        "Yes! Our honey is 100% raw and unfiltered. It's straight from the hive, keeping all the natural goodness and sweet taste intact."
     },
     {
       question: "How should I store my Hunnybi box?",
       answer:
-        "Store your Hunnybi box at room temperature in a dry place, away from direct sunlight. Do not refrigerate the honey, as it will accelerate crystallization."
+        "Just keep it in your pantry! Room temperature is perfect. Please don't put the honey in the fridge, or it might get hard and crunchy."
     },
     {
-      question: "What if my honey crystallizes?",
+      question: "What if my honey gets hard (crystallizes)?",
       answer:
-        "Crystallization is a natural mark of pure, raw honey. If it crystallizes, simply place the jar in a bowl of warm water (not boiling) until it returns to a liquid state."
+        "Don't worry, that's completely normal for pure honey! Just place the jar in a warm bowl of water for a few minutes and it will be perfectly runny again."
     },
     {
-      question: "Do you offer bulk or corporate gifting options?",
+      question: "Do you have options for big parties or gifts?",
       answer:
-        "Absolutely. We specialize in premium corporate gifting. Please navigate to our Wholesale section or contact our concierge team for custom arrangements."
+        "We sure do! We love putting together special packages for birthday parties, weddings, and corporate gifts. Check out our Bulk Orders section."
     },
     {
       question: "Are the nuts roasted with oil?",
       answer:
-        "No, we dry-roast our premium nuts slowly at low temperatures to enhance their natural flavor profile without the addition of any oils or artificial preservatives."
+        "Nope! We gently dry-roast our nuts without any oils or yucky stuff so they stay super crunchy and healthy."
     }
   ];
 
   return (
     <section id="faq" className="section-shell">
       <div className="mx-auto mb-12 max-w-3xl text-center">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
-          Common Queries
+        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+          Got Questions?
         </p>
-        <h2 className="mb-6 text-3xl font-medium tracking-tight sm:text-4xl">
-          Frequently Asked Questions
+        <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl">
+          We've Got Answers!
         </h2>
       </div>
 
@@ -44,7 +44,7 @@ export function FAQ() {
             key={index}
             className="group rounded-xl border border-border/60 bg-card p-6 transition-colors open:bg-background/50"
           >
-            <summary className="flex cursor-pointer items-center justify-between text-lg font-medium text-foreground transition-colors marker:content-none hover:text-primary">
+            <summary className="flex cursor-pointer items-center justify-between text-lg font-bold text-foreground transition-colors marker:content-none hover:text-primary">
               {faq.question}
               <span className="relative ml-4 flex size-5 flex-shrink-0 items-center justify-center">
                 <span className="absolute h-0.5 w-full bg-foreground transition-transform group-open:rotate-180" />

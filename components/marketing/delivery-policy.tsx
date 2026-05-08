@@ -4,27 +4,27 @@ import { Card } from "@/components/ui/card";
 const policies = [
   {
     icon: Truck,
-    title: "Express Nationwide Shipping",
+    title: "Super Fast Shipping",
     description:
-      "We deliver across the country using premium logistics partners to ensure your Hunnybi arrives in perfect condition."
+      "We pack your order with love and send it zooming across the country so you can start snacking sooner!"
   },
   {
     icon: Clock,
-    title: "2-4 Business Days",
+    title: "Arrives in 2-4 Days",
     description:
-      "Standard delivery takes 2 to 4 business days. Priority overnight shipping is available at checkout for urgent orders."
+      "Most orders arrive in just a few days. Need it for a last-minute gift? Choose our speedy overnight option at checkout."
   },
   {
     icon: Package,
-    title: "Secure Packaging",
+    title: "Safe & Snug Packaging",
     description:
-      "Every box is temperature-controlled and meticulously packed to protect the delicate glass jars and premium nuts."
+      "Every jar is wrapped up tightly and tucked in securely so it arrives safely at your doorstep, ready to be enjoyed."
   },
   {
     icon: Shield,
-    title: "Freshness Guarantee",
+    title: "The Happy Guarantee",
     description:
-      "If your order arrives damaged or compromised in any way, our concierge team will dispatch a replacement immediately."
+      "If anything at all goes wrong with your delivery, just let us know and we'll send a fresh batch your way right away!"
   }
 ];
 
@@ -33,13 +33,12 @@ export function DeliveryPolicy() {
     <section id="delivery" className="section-shell bg-card/50">
       <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
         <div className="sticky top-28">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
-            Logistics & Care
+          <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+            Quick & Safe Delivery
           </p>
-          <h2 className="mb-6 text-3xl font-medium tracking-tight sm:text-4xl">Delivery Policy</h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            We treat our delivery process with the same care and attention as our ingredients.
-            Expect nothing less than a premium unboxing experience.
+          <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl">From Our Hive to Yours!</h2>
+          <p className="mb-8 text-lg font-medium text-muted-foreground">
+            We pack every box full of love and care, ensuring it arrives at your doorstep looking beautiful and tasting perfectly fresh.
           </p>
         </div>
 
@@ -52,7 +51,7 @@ export function DeliveryPolicy() {
               <div className="mb-4 inline-flex size-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
                 <policy.icon className="size-5" />
               </div>
-              <h3 className="mb-2 font-medium text-foreground">{policy.title}</h3>
+              <h3 className="mb-2 font-bold text-foreground">{policy.title}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">{policy.description}</p>
             </Card>
           ))}

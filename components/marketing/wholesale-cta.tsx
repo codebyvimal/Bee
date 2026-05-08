@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,16 +10,14 @@ export function WholesaleCTA() {
 
         <div className="relative grid gap-10 px-8 py-16 md:p-16 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
-              Corporate & Wholesale
+            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+              Bulk Orders & Parties
             </p>
-            <h2 className="mb-6 text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
-              Partner with Hunnybi
+            <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+              Share the Sweetness!
             </h2>
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-background/80">
-              Elevate your retail shelves, corporate gifting programs, or premium hospitality
-              offerings with our thoughtfully curated honey and nut boxes. We offer dedicated
-              support and bespoke packaging options for volume orders.
+            <p className="mb-8 max-w-xl text-lg font-medium leading-relaxed text-background/80">
+              Planning a big party, corporate event, or stocking your store shelves? We've got you covered with special bulk pricing and adorable custom packaging options that everyone will love.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -39,17 +38,14 @@ export function WholesaleCTA() {
             </div>
           </div>
 
-          <div className="relative mx-auto hidden aspect-square w-full max-w-md lg:block">
-            <div className="absolute inset-0 animate-pulse rounded-full border border-background/10" />
-            <div className="absolute inset-8 rounded-full border border-background/20" />
-            <div className="absolute inset-16 flex items-center justify-center rounded-full border border-primary/20 bg-background/5 backdrop-blur-sm">
-              <div className="text-center">
-                <p className="mb-2 font-serif text-3xl italic text-primary">HB</p>
-                <p className="text-sm font-medium uppercase tracking-widest text-background/80">
-                  Wholesale
-                </p>
-              </div>
-            </div>
+          <div className="relative mx-auto hidden aspect-square w-full max-w-md overflow-hidden rounded-full border border-border/20 lg:block shadow-2xl">
+            <Image
+              src="/images/wholesale.png"
+              alt="Hunnybi Wholesale and Corporate Gifting"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
           </div>
         </div>
       </div>

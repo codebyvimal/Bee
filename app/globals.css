@@ -4,80 +4,80 @@
 
 @layer base {
   :root {
-    /* Backgrounds: Soft, warm, minimalist off-white */
-    --background: 40 20% 97%;
-    --foreground: 20 14% 15%;
+    /* Backgrounds: Clean, minimal white */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    /* Cards and Popovers: Clean white for depth */
+    /* Cards and Popovers */
     --card: 0 0% 100%;
-    --card-foreground: 20 14% 15%;
+    --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14% 15%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary: Elegant, muted gold/amber for modern wellness */
-    --primary: 38 40% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: Minimalist Black for a clean look, or keep the honey gold. Let's use honey gold as an accent */
+    --primary: 40 100% 50%;
+    --primary-foreground: 0 0% 10%;
 
-    /* Secondary: Soft stone/beige */
-    --secondary: 40 15% 90%;
-    --secondary-foreground: 20 14% 20%;
+    /* Secondary: Very light gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
 
-    /* Muted: Subtle grays for borders and inactive states */
-    --muted: 40 10% 92%;
-    --muted-foreground: 20 10% 45%;
+    /* Muted: Soft grays for borders and inactive text */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent: Perhaps a soft sage or earthy green for wellness */
-    --accent: 120 15% 45%;
+    /* Accent: A subtle, natural green for success states */
+    --accent: 120 20% 40%;
     --accent-foreground: 0 0% 100%;
 
-    /* Destructive: Softened red */
-    --destructive: 0 50% 50%;
+    /* Destructive: Soft terracotta/red */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs */
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 38 40% 50%;
+    /* Borders and inputs: Minimalist light gray borders */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 10%;
 
-    /* Border radius: Elegant, slightly rounded but crisp */
-    --radius: 0.35rem;
+    /* Border radius: Elegant, minimal */
+    --radius: 0.5rem;
   }
 
   .dark {
-    /* Backgrounds: Deep, rich charcoal */
-    --background: 20 10% 10%;
-    --foreground: 40 20% 90%;
+    /* Backgrounds: Deep, warm cocoa/espresso brown */
+    --background: 30 20% 12%;
+    --foreground: 42 40% 96%;
 
     /* Cards and Popovers */
-    --card: 20 10% 12%;
-    --card-foreground: 40 20% 90%;
-    --popover: 20 10% 12%;
-    --popover-foreground: 40 20% 90%;
+    --card: 30 20% 16%;
+    --card-foreground: 42 40% 96%;
+    --popover: 30 20% 16%;
+    --popover-foreground: 42 40% 96%;
 
-    /* Primary */
-    --primary: 38 40% 55%;
-    --primary-foreground: 20 10% 10%;
+    /* Primary: Bright, golden honey that glows on dark */
+    --primary: 40 90% 55%;
+    --primary-foreground: 30 30% 15%;
 
-    /* Secondary */
-    --secondary: 20 10% 18%;
-    --secondary-foreground: 40 20% 90%;
+    /* Secondary: Muted warm brown */
+    --secondary: 30 15% 25%;
+    --secondary-foreground: 42 40% 96%;
 
-    /* Muted */
-    --muted: 20 10% 18%;
-    --muted-foreground: 40 10% 60%;
+    /* Muted: Soft earth tones */
+    --muted: 30 15% 20%;
+    --muted-foreground: 40 20% 70%;
 
-    /* Accent */
-    --accent: 120 15% 40%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: A soft, natural sage green */
+    --accent: 100 20% 45%;
+    --accent-foreground: 42 40% 96%;
 
-    /* Destructive */
-    --destructive: 0 50% 45%;
+    /* Destructive: Soft terracotta red */
+    --destructive: 10 60% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 20 10% 20%;
-    --input: 20 10% 20%;
-    --ring: 38 40% 55%;
+    --border: 30 15% 25%;
+    --input: 30 15% 25%;
+    --ring: 40 90% 55%;
   }
 
   * {
