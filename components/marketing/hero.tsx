@@ -17,29 +17,39 @@ export function Hero() {
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Dark overlay with a gradient for more depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
       <div className="container-shell relative z-10 text-center">
-        <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-white/80">
+        <p className="mb-6 text-sm font-body uppercase tracking-[0.3em] text-white/80">
           Pure • Raw • Uncompromised
         </p>
-        <h1 className="mx-auto max-w-4xl text-5xl font-medium tracking-tight text-white sm:text-6xl md:text-7xl">
-          The New Standard in <span className="italic">Honey</span>
+        <h1 className="mx-auto max-w-4xl font-heading text-5xl font-semibold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+          The New Standard in <span className="italic text-primary">Honey</span>
         </h1>
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl">
+        <p className="mx-auto mt-8 max-w-2xl font-body text-lg leading-relaxed text-white/90 sm:text-xl md:text-2xl">
           Experience the pure essence of raw honey and premium roasted nuts. Minimal ingredients, maximum impact.
         </p>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button asChild size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-white/90">
+        <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
+          <Button
+            asChild
+            size="lg"
+            className="group w-full bg-primary text-primary-foreground transition-all duration-300 hover:scale-105 hover:bg-primary/90 sm:w-auto"
+          >
             <a href="#product">
-              Shop the Collection <ArrowRight className="ml-2 size-4" />
+              Shop Collection
+              <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/10 hover:text-white">
-            <a href="#why-hunnybi">Explore the Benefits</a>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="w-full border-white/20 bg-white/10 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-white sm:w-auto"
+          >
+            <a href="#why-hunnybi">Explore Benefits</a>
           </Button>
         </div>
       </div>

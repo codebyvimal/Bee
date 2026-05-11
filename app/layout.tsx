@@ -1,20 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Raleway } from "next/font/google";
 import "./globals.css";
 import { brand } from "@/lib/constants";
 import { getPublicSiteUrl } from "@/lib/env";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-lora",
+  display: "swap"
+});
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway",
   display: "swap"
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f8bd16"
+  themeColor: "#CA8A04"
 };
 
 export const metadata: Metadata = {
@@ -53,7 +59,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.variable, "min-h-dvh font-sans")}>{children}</body>
+      <body className={cn(lora.variable, raleway.variable, "min-h-dvh font-body")}>
+        {children}
+      </body>
     </html>
   );
 }

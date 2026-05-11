@@ -4,80 +4,76 @@
 
 @layer base {
   :root {
-    /* Backgrounds: Clean, minimal white */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Backgrounds: Stone 50 for a premium, organic feel */
+    --background: 30 20% 98%;
+    --foreground: 30 15% 10%;
 
     /* Cards and Popovers */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 30 15% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 30 15% 10%;
 
-    /* Primary: Minimalist Black for a clean look, or keep the honey gold. Let's use honey gold as an accent */
-    --primary: 40 100% 50%;
-    --primary-foreground: 0 0% 10%;
+    /* Primary: Premium Gold (Yellow 600) */
+    --primary: 42 87% 41%;
+    --primary-foreground: 30 15% 100%;
 
-    /* Secondary: Very light gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    /* Secondary: Stone 100 */
+    --secondary: 30 15% 94%;
+    --secondary-foreground: 30 15% 10%;
 
-    /* Muted: Soft grays for borders and inactive text */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    /* Muted: Soft earth tones */
+    --muted: 30 15% 94%;
+    --muted-foreground: 30 5% 45%;
 
-    /* Accent: A subtle, natural green for success states */
-    --accent: 120 20% 40%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: Stone 200 */
+    --accent: 30 15% 90%;
+    --accent-foreground: 30 15% 10%;
 
-    /* Destructive: Soft terracotta/red */
+    /* Destructive: Soft terracotta */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs: Minimalist light gray borders */
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    /* Borders and inputs: Stone 200 */
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 42 87% 41%;
 
     /* Border radius: Elegant, minimal */
-    --radius: 0.5rem;
+    --radius: 1rem;
   }
 
   .dark {
-    /* Backgrounds: Deep, warm cocoa/espresso brown */
-    --background: 30 20% 12%;
-    --foreground: 42 40% 96%;
+    /* Backgrounds: Stone 950 */
+    --background: 30 15% 5%;
+    --foreground: 30 20% 98%;
 
     /* Cards and Popovers */
-    --card: 30 20% 16%;
-    --card-foreground: 42 40% 96%;
-    --popover: 30 20% 16%;
-    --popover-foreground: 42 40% 96%;
+    --card: 30 15% 8%;
+    --card-foreground: 30 20% 98%;
+    --popover: 30 15% 8%;
+    --popover-foreground: 30 20% 98%;
 
-    /* Primary: Bright, golden honey that glows on dark */
-    --primary: 40 90% 55%;
-    --primary-foreground: 30 30% 15%;
+    /* Primary: Glowing Gold */
+    --primary: 42 87% 55%;
+    --primary-foreground: 30 15% 10%;
 
-    /* Secondary: Muted warm brown */
-    --secondary: 30 15% 25%;
-    --secondary-foreground: 42 40% 96%;
+    /* Secondary: Stone 800 */
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 30 20% 98%;
 
-    /* Muted: Soft earth tones */
-    --muted: 30 15% 20%;
-    --muted-foreground: 40 20% 70%;
+    /* Muted: Stone 800 */
+    --muted: 30 15% 15%;
+    --muted-foreground: 30 5% 65%;
 
-    /* Accent: A soft, natural sage green */
-    --accent: 100 20% 45%;
-    --accent-foreground: 42 40% 96%;
-
-    /* Destructive: Soft terracotta red */
-    --destructive: 10 60% 50%;
-    --destructive-foreground: 0 0% 100%;
+    /* Accent: Stone 700 */
+    --accent: 30 15% 20%;
+    --accent-foreground: 30 20% 98%;
 
     /* Borders and inputs */
-    --border: 30 15% 25%;
-    --input: 30 15% 25%;
-    --ring: 40 90% 55%;
+    --border: 30 15% 15%;
+    --input: 30 15% 15%;
+    --ring: 42 87% 55%;
   }
 
   * {

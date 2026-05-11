@@ -23,15 +23,15 @@ const reasons = [
 
 export function WhyHunnybi() {
   return (
-    <section id="why-hunnybi" className="section-shell">
+    <section id="why-hunnybi" className="section-shell bg-background">
       <div className="mb-16 text-center md:mb-20">
-        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+        <p className="mb-4 font-body text-sm font-bold uppercase tracking-[0.2em] text-primary">
           Our Promise
         </p>
-        <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
-          Why Everyone Loves Hunnybi!
+        <h2 className="mb-6 font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl">
+          Why Everyone Loves <span className="text-primary italic">Hunnybi!</span>
         </h2>
-        <p className="mx-auto max-w-2xl text-lg font-medium text-muted-foreground">
+        <p className="mx-auto max-w-2xl font-body text-lg text-muted-foreground md:text-xl">
           We wanted a snack that tastes like a treat but acts like a superhero. Here is why families everywhere are filling their pantries with Hunnybi.
         </p>
       </div>
@@ -40,13 +40,13 @@ export function WhyHunnybi() {
         {reasons.map((reason) => (
           <div
             key={reason.title}
-            className="group relative rounded-2xl border border-border/50 bg-card p-8 transition-all duration-300 hover:border-primary/20 hover:shadow-lg"
+            className="group relative rounded-3xl border border-white/20 bg-white p-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-stone-900/50"
           >
-            <div className="mb-6 inline-flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-              <reason.icon className="size-6" />
+            <div className="mb-8 inline-flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20">
+              <reason.icon className="size-8" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-foreground">{reason.title}</h3>
-            <p className="leading-relaxed text-muted-foreground">{reason.description}</p>
+            <h3 className="mb-4 font-heading text-2xl font-semibold text-foreground">{reason.title}</h3>
+            <p className="font-body leading-relaxed text-muted-foreground">{reason.description}</p>
           </div>
         ))}
       </div>
