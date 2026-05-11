@@ -34,7 +34,7 @@ export function SiteHeader() {
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <Button asChild variant="ghost" size="sm" className="hidden font-body sm:inline-flex">
               <a href="/admin/login">Log In</a>
             </Button>

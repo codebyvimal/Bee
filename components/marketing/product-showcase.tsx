@@ -67,10 +67,10 @@ export function ProductShowcase() {
           </Card>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" variant="premium" className="flex-1 font-body transition-all active:scale-95">
+            <Button size="lg" variant="premium" className="w-full font-body transition-all active:scale-95 sm:flex-1">
               Add to Cart <ArrowRight className="ml-2 size-4" />
             </Button>
-            <Button size="lg" variant="outline" className="flex-1 font-body transition-all active:scale-95">
+            <Button size="lg" variant="outline" className="w-full font-body transition-all active:scale-95 sm:flex-1">
               Nutritional Info
             </Button>
           </div>

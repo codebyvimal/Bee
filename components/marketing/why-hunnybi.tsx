@@ -1,20 +1,20 @@
-import { Leaf, ShieldCheck, Zap } from "lucide-react";
+import Image from "next/image";
 
 const reasons = [
   {
-    icon: Zap,
+    iconSrc: "/images/icons/icon_6.png",
     title: "All-Day Play Energy",
     description:
       "Say goodbye to afternoon slumps! The sweet honey and crunchy nuts give you a happy, steady burst of energy for school, work, or play."
   },
   {
-    icon: ShieldCheck,
+    iconSrc: "/images/icons/icon_7.png",
     title: "Nothing But Goodness",
     description:
       "We keep it simple and honest. No yucky artificial stuff, no hidden sugars. Just the pure, yummy ingredients from Mother Nature herself!"
   },
   {
-    icon: Leaf,
+    iconSrc: "/images/icons/icon_5.png",
     title: "Happy Bees, Happy Trees",
     description:
       "Our honey comes from farms that love their bees, and our nuts are grown by folks who care about the earth. Good for you, good for the planet!"
@@ -42,8 +42,8 @@ export function WhyHunnybi() {
             key={reason.title}
             className="group relative rounded-3xl border border-white/20 bg-white p-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-stone-900/50"
           >
-            <div className="mb-8 inline-flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/20">
-              <reason.icon className="size-8" />
+            <div className="relative mb-8 inline-flex size-20 items-center justify-center rounded-2xl bg-primary/5 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/10 overflow-hidden">
+              <Image src={reason.iconSrc} alt={reason.title} fill className="object-contain p-2 transition-all duration-500" />
             </div>
             <h3 className="mb-4 font-heading text-2xl font-semibold text-foreground">{reason.title}</h3>
             <p className="font-body leading-relaxed text-muted-foreground">{reason.description}</p>

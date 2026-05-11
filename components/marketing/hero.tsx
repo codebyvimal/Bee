@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-24 sm:pt-32">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 sm:pt-32">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -21,18 +21,18 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
-      <div className="container-shell relative z-10 text-center">
-        <p className="mb-6 text-sm font-body uppercase tracking-[0.3em] text-white/80">
+      <div className="container-shell relative z-10 -mt-12 text-center sm:-mt-20">
+        <p className="mb-4 text-sm font-body uppercase tracking-[0.3em] text-white/80">
           Pure • Raw • Uncompromised
         </p>
-        <h1 className="mx-auto max-w-4xl font-heading text-5xl font-semibold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="mx-auto max-w-4xl font-heading text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
           The New Standard in <span className="italic text-primary">Honey</span>
         </h1>
-        <p className="mx-auto mt-8 max-w-2xl font-body text-lg leading-relaxed text-white/90 sm:text-xl md:text-2xl">
+        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-white/90 sm:mt-4 sm:text-xl md:text-2xl">
           Experience the pure essence of raw honey and premium roasted nuts. Minimal ingredients, maximum impact.
         </p>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-6 sm:flex-row sm:gap-6">
           <Button
             asChild
             size="lg"

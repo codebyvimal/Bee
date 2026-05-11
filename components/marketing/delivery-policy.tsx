@@ -1,27 +1,27 @@
-import { Truck, Package, Clock, Shield } from "lucide-react";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 
 const policies = [
   {
-    icon: Truck,
+    iconSrc: "/images/icons/icon_3.png",
     title: "Super Fast Shipping",
     description:
       "We pack your order with love and send it zooming across the country so you can start snacking sooner!"
   },
   {
-    icon: Clock,
+    iconSrc: "/images/icons/icon_4.png",
     title: "Arrives in 2-4 Days",
     description:
       "Most orders arrive in just a few days. Need it for a last-minute gift? Choose our speedy overnight option at checkout."
   },
   {
-    icon: Package,
+    iconSrc: "/images/icons/icon_6.png",
     title: "Safe & Snug Packaging",
     description:
       "Every jar is wrapped up tightly and tucked in securely so it arrives safely at your doorstep, ready to be enjoyed."
   },
   {
-    icon: Shield,
+    iconSrc: "/images/icons/icon_7.png",
     title: "The Happy Guarantee",
     description:
       "If anything at all goes wrong with your delivery, just let us know and we'll send a fresh batch your way right away!"
@@ -46,10 +46,10 @@ export function DeliveryPolicy() {
           {policies.map((policy) => (
             <Card
               key={policy.title}
-              className="h-full border-white/20 bg-white/50 p-8 shadow-sm backdrop-blur-md transition-all duration-300 hover:shadow-xl dark:bg-stone-900/50"
+              className="group h-full border-white/20 bg-white/50 p-8 shadow-sm backdrop-blur-md transition-all duration-300 hover:shadow-xl dark:bg-stone-900/50"
             >
-              <div className="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                <policy.icon className="size-6" />
+              <div className="relative mb-6 inline-flex h-16 w-full max-w-[140px] items-center justify-start transition-all duration-500 group-hover:scale-110">
+                <Image src={policy.iconSrc} alt={policy.title} fill className="object-contain object-left" />
               </div>
               <h3 className="mb-3 font-heading text-xl font-semibold text-foreground">{policy.title}</h3>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">{policy.description}</p>
