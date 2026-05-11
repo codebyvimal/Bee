@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-16">
+    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-24 sm:pt-32">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -32,11 +32,11 @@ export function Hero() {
           Experience the pure essence of raw honey and premium roasted nuts. Minimal ingredients, maximum impact.
         </p>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <Button
             asChild
             size="lg"
-            className="group w-full bg-primary text-primary-foreground transition-all duration-300 hover:scale-105 hover:bg-primary/90 sm:w-auto"
+            className="group w-full bg-primary px-10 text-primary-foreground transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-95 sm:w-auto sm:hover:scale-105"
           >
             <a href="#product">
               Shop Collection
@@ -47,7 +47,7 @@ export function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="w-full border-white/20 bg-white/10 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-white sm:w-auto"
+            className="w-full border-white/20 bg-white/10 px-10 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-white active:scale-95 sm:w-auto"
           >
             <a href="#why-hunnybi">Explore Benefits</a>
           </Button>

@@ -28,30 +28,30 @@ export function FAQ() {
   ];
 
   return (
-    <section id="faq" className="section-shell">
-      <div className="mx-auto mb-12 max-w-3xl text-center">
-        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+    <section id="faq" className="section-shell bg-background">
+      <div className="mx-auto mb-12 max-w-3xl text-center md:mb-20">
+        <p className="mb-4 font-body text-sm font-bold uppercase tracking-[0.2em] text-primary">
           Got Questions?
         </p>
-        <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl">
+        <h2 className="mb-6 font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl">
           We&apos;ve Got Answers!
         </h2>
       </div>
 
-      <div className="mx-auto grid max-w-3xl gap-4">
+      <div className="mx-auto grid max-w-4xl gap-6">
         {faqs.map((faq, index) => (
           <details
             key={index}
-            className="group rounded-xl border border-border/60 bg-card p-6 transition-colors open:bg-background/50"
+            className="group rounded-3xl border border-white/20 bg-white p-8 transition-all duration-300 open:bg-white/80 open:shadow-xl dark:bg-stone-900/50"
           >
-            <summary className="flex cursor-pointer items-center justify-between text-lg font-bold text-foreground transition-colors marker:content-none hover:text-primary">
+            <summary className="flex cursor-pointer items-center justify-between font-heading text-xl font-semibold text-foreground transition-colors marker:content-none hover:text-primary">
               {faq.question}
-              <span className="relative ml-4 flex size-5 flex-shrink-0 items-center justify-center">
+              <span className="relative ml-4 flex size-6 flex-shrink-0 items-center justify-center">
                 <span className="absolute h-0.5 w-full bg-foreground transition-transform group-open:rotate-180" />
                 <span className="absolute h-full w-0.5 bg-foreground transition-transform group-open:rotate-90" />
               </span>
             </summary>
-            <p className="mt-4 pr-8 text-base leading-relaxed text-muted-foreground">
+            <p className="mt-6 pr-8 font-body text-lg leading-relaxed text-muted-foreground">
               {faq.answer}
             </p>
           </details>

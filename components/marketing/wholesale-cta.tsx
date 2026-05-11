@@ -9,28 +9,28 @@ export function WholesaleCTA() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-transparent opacity-40" />
 
         <div className="relative grid gap-10 px-8 py-16 md:p-20 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div>
+          <div className="text-center lg:text-left">
             <p className="mb-4 font-body text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Bulk Orders & Parties
             </p>
             <h2 className="mb-6 font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl">
               Share the <span className="italic">Sweetness!</span>
             </h2>
-            <p className="mb-8 max-w-xl font-body text-lg leading-relaxed text-background/70 md:text-xl">
-              Planning a big party, corporate event, or stocking your store shelves? We&apos;ve got you covered with special bulk pricing and adorable custom packaging options that everyone will love.
+            <p className="mb-8 max-w-xl font-body text-lg leading-relaxed text-background/70 md:mx-0 md:text-xl">
+              Planning a big party, corporate event, or stocking your store shelves? We&apos;ve got you covered with special bulk pricing and adorable custom packaging.
             </p>
 
-            <div className="flex flex-col gap-6 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
               <Button
                 size="lg"
-                className="rounded-full bg-primary px-10 font-body text-primary-foreground transition-all duration-300 hover:scale-105 hover:bg-primary/90"
+                className="rounded-full bg-primary px-10 font-body text-primary-foreground transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-95 sm:hover:scale-105"
               >
                 Request Catalog
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-full border-background/20 px-10 font-body text-background backdrop-blur-md transition-all duration-300 hover:bg-background/10"
+                className="rounded-full border-background/20 px-10 font-body text-background backdrop-blur-md transition-all duration-300 hover:bg-background/10 active:scale-95"
               >
                 Contact Sales <ArrowRight className="ml-2 size-4" />
               </Button>

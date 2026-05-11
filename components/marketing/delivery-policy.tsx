@@ -30,14 +30,14 @@ const policies = [
 
 export function DeliveryPolicy() {
   return (
-    <section id="delivery" className="section-shell bg-card/50">
+    <section id="delivery" className="section-shell bg-secondary/30">
       <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
-        <div className="sticky top-28">
-          <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
+        <div className="lg:sticky lg:top-32">
+          <p className="mb-4 font-body text-sm font-bold uppercase tracking-[0.2em] text-primary">
             Quick & Safe Delivery
           </p>
-          <h2 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl">From Our Hive to Yours!</h2>
-          <p className="mb-8 text-lg font-medium text-muted-foreground">
+          <h2 className="mb-6 font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">From Our Hive to Yours!</h2>
+          <p className="mb-8 font-body text-lg leading-relaxed text-muted-foreground md:text-xl">
             We pack every box full of love and care, ensuring it arrives at your doorstep looking beautiful and tasting perfectly fresh.
           </p>
         </div>
@@ -46,13 +46,13 @@ export function DeliveryPolicy() {
           {policies.map((policy) => (
             <Card
               key={policy.title}
-              className="h-full border-border/50 bg-background/50 p-6 backdrop-blur"
+              className="h-full border-white/20 bg-white/50 p-8 shadow-sm backdrop-blur-md transition-all duration-300 hover:shadow-xl dark:bg-stone-900/50"
             >
-              <div className="mb-4 inline-flex size-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-                <policy.icon className="size-5" />
+              <div className="mb-6 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
+                <policy.icon className="size-6" />
               </div>
-              <h3 className="mb-2 font-bold text-foreground">{policy.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{policy.description}</p>
+              <h3 className="mb-3 font-heading text-xl font-semibold text-foreground">{policy.title}</h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground">{policy.description}</p>
             </Card>
           ))}
         </div>
